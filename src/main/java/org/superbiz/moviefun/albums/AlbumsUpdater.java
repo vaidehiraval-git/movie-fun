@@ -49,7 +49,8 @@ public class AlbumsUpdater {
 
         List<Album> albumsToHave = readFromCsv(objectReader, maybeBlob.get().inputStream);
         List<Album> albumsWeHave = albumsBean.getAlbums();
-
+        logger.info(albumsToHave.toString());
+        logger.info(albumsWeHave.toString());
         createNewAlbums(albumsToHave, albumsWeHave);
         deleteOldAlbums(albumsToHave, albumsWeHave);
         updateExistingAlbums(albumsToHave, albumsWeHave);
