@@ -41,7 +41,7 @@ public class MoviesBean {
 
     @Transactional
     public void addMovie(Movie movie) {
-        logger.debug("Creating movie with title {}", movie.getTitle());
+        logger.info("Creating movie with title {}", movie.getTitle());
 
         entityManager.persist(movie);
     }
